@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All API Integration Test Suite">
+
+    <listeners>
+        <listener class-name="com.demoqa.qa.tests.api.utilities.ApiReport"/>
+    </listeners>
+
+    <test verbose="3" name="QA test report">
+
+        <classes>
+            <class name="com.demoqa.qa.tests.api.testCases.AccountTest">
+                <methods>
+                    <include name="testPostAccount"/>
+                    <include name="testGenerateToken"/>
+                    <include name="testPostAccountAuthorized"/>
+                    <include name="testGetAccount"/>
+                    <include name="testDeleteAccount"/>
+                </methods>
+            </class>
+            <class name="com.demoqa.qa.tests.api.testCases.BookStoreTest">
+                <methods>
+                    <include name="testGetBooks"/>
+                    <include name="testGetBook"/>
+                    <include name="testAddBook"/>
+                    <include name="testPutBooks"/>
+                    <include name="testDeleteBooks"/>
+                    <include name="testDeleteBook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

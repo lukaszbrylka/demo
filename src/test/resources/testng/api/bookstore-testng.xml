@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Bookstore API Integration Test Suite">
+
+    <listeners>
+        <listener class-name="com.demoqa.qa.tests.api.utilities.ApiReport"/>
+    </listeners>
+
+    <test verbose="2" name="Bookstore Test">
+        <classes>
+            <class name="com.demoqa.qa.tests.api.testCases.BookStoreTest">
+                <methods>
+                    <include name="testGetBooks"/>
+                    <include name="testGetBook"/>
+                    <include name="testAddBook"/>
+                    <include name="testPutBooks"/>
+                    <include name="testDeleteBook"/>
+                    <include name="testDeleteBooks"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
